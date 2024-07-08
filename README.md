@@ -1,2 +1,3 @@
 # config
-Configuration for development tools that I use
+
+Just in case my computer explodes!

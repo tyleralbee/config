@@ -1,0 +1,35 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    // Settings applied after Welcome
+    "base_keymap": "VSCode",
+    "vim_mode": true,
+    "telemetry": {
+        "diagnostics": true, // Crash reports
+        "metrics": false
+    },
+    "ui_font_size": 12,
+    "buffer_font_size": 12,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Ayu Dark"
+    },
+
+    // Custom Built-in Zed settings
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 1000 // VSCode default
+        }
+    },
+    "buffer_font_family": "Droid Sans Mono for Powerline",
+    "formatter": "prettier",
+    "tab_size": 4,
+    "ui_font_family": "Droid Sans Mono for Powerline"
+}

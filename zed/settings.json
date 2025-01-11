@@ -8,6 +8,13 @@
 // from the command palette or from `Zed` application menu.
 {
     // Settings applied after Welcome
+    "assistant": {
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4o"
+        },
+        "version": "2"
+    },
     "base_keymap": "VSCode",
     "vim_mode": true,
     "telemetry": {
@@ -30,6 +37,59 @@
     },
     "buffer_font_family": "Droid Sans Mono for Powerline",
     "formatter": "prettier",
+    "file_types": {
+        "env": [".env*"], // requires Zed env extension
+        "JSON": [".prettierrc"],
+        "JSONC": [
+            "**/.vscode/**/*.json",
+            "**/packages/tsconfig/*.json",
+            "**/turbo.json",
+            "**/host.json",
+            "**/local.settings.json",
+            "**/tsconfig.json"
+        ],
+        "LOG": ["*.log", "*.log.*"]
+    },
+    "gutter": { "code_actions": false },
+    "preview_tabs": {
+        "enabled": false
+    },
+    "project_panel": {
+        "show_diagnostics": "all",
+        "auto_fold_dirs": false,
+        "indent_size": 16
+    },
+    "relative_line_numbers": true,
+    "scroll_sensitivity": 2,
+    "search": { "case_sensitive": true, "regex": false, "whole_word": false },
+    "search_wrap": false, // disables `n` on last result looping back to first result using `/` search
+    "tab_bar": {
+        "show_nav_history_buttons": false
+    },
     "tab_size": 4,
-    "ui_font_family": "Droid Sans Mono for Powerline"
+    "tabs": {
+        "file_icons": true,
+        "git_status": true,
+        "show_diagnostics": "all"
+    },
+    "terminal": {
+        // Powerline font necessary for oh-my-bash context renderer (git branch, etc.)
+        "font_family": "Droid Sans Mono for Powerline",
+        "font_size": 12
+    },
+    "toolbar": {
+        "quick_actions": false,
+        "selections_menu": false,
+        "breadcrumbs": false
+    },
+    "ui_font_family": "Droid Sans Mono for Powerline",
+    "use_autoclose": false,
+    "use_smartcase_search": true,
+    "vim": {
+        "use_multiline_find": true,
+        "use_smartcase_find": true,
+        "toggle_relative_line_numbers": true,
+        "highlight_on_yank_duration": 100,
+        "use_system_clipboard": "always"
+    }
 }

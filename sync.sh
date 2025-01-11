@@ -28,8 +28,8 @@ ZED_KEYMAP="$ZED_CONFIG_DIR/keymap.json"
 ZED_SETTINGS="$ZED_CONFIG_DIR/settings.json"
 
 # Repository paths
-REPO_TMUX="./tmux"
-REPO_VSCODE="./vscode"
+REPO_TMUX_DIR="./tmux"
+REPO_VSCODE_DIR="./vscode"
 REPO_ZED_DIR="./zed"
 
 # Ensure directory paths
@@ -37,16 +37,11 @@ mkdir -p tmux
 mkdir -p vscode
 mkdir -p zed
 
-# Document sources
-echo $TMUX_CONFIG > "$REPO_TMUX/SOURCE"
-echo $VSCODE_USER_CONFIG_DIR > "$REPO_VSCODE/SOURCE"
-echo $ZED_CONFIG_DIR > "$REPO_ZED/SOURCE"
-
 # Copy
-cp $TMUX_CONFIG "$REPO_TMUX/.tmux.conf"
+cp $TMUX_CONFIG "$REPO_TMUX_DIR/.tmux.conf"
 
-cp $VSCODE_USER_CONFIG_KEYBINDINGS "$REPO_VSCODE/keybindings.json"
-cp $VSCODE_USER_CONFIG_SETTINGS "$REPO_VSCODE/settings.json"
+cp $VSCODE_USER_CONFIG_KEYBINDINGS "$REPO_VSCODE_DIR/keybindings.json"
+cp $VSCODE_USER_CONFIG_SETTINGS "$REPO_VSCODE_DIR/settings.json"
 
 cp $ZED_KEYMAP "$REPO_ZED_DIR/keymap.json"
 cp $ZED_SETTINGS "$REPO_ZED_DIR/settings.json"
